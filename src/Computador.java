@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
 public class Computador implements InterfacePC{
-    public boolean ligado;
-    public int volume;
-    public ArrayList<String> pecas;
+    private boolean ligado;
+    private int volume;
+    private ArrayList<String> pecas;
 
     public Computador(){
         this.ligado = false;
@@ -15,6 +15,7 @@ public class Computador implements InterfacePC{
     }
 
     public boolean isLigado() {
+
         return ligado;
     }
 
@@ -23,20 +24,20 @@ public class Computador implements InterfacePC{
     }
 
     public int getVolume() {
+
         return volume;
     }
 
     public void setVolume(int volume) {
+        if(volume >= 0 && volume <= 100){
         this.volume = volume;
+    }
     }
 
     public ArrayList<String> getPecas() {
         return pecas;
     }
 
-    public void setPecas(ArrayList<String> pecas) {
-        this.pecas = pecas;
-    }
 
 
     @Override
